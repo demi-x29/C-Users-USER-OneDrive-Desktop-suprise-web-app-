@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up and Login</title>
+    <script src="https://kit.fontawesome.com/60eb672375.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: antiquewhite;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            text-align: center;
+            color: rgb(30, 83, 83);
+            font-size: 170%;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        p {
+            font-size: 20px;
+            text-align: center;
+            margin: 10px 0;
+        }
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(26, 5, 5);
+        }
+        .form-box {
+            width: 400px;
+            padding: 30px;
+            background: #d1a8a8;
+            border-radius: 10px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        .form-box h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: rgb(19, 17, 17);
+        }
+        .input-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 10px 10px 10px 40px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background: #f0f0f0;
+        }
+        .input-group i {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #777;
+        }
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        .btn {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: rgb(19, 17, 17);
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .toggle-btn {
+            text-align: center;
+            margin-top: 10px;
+            color: #007BFF;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Generate Standard Portfolio</h1>
+    </header>
+    <p>We offer the best services tailored to your specific needs.</p>
+    <div class="container">
+        <div class="form-box" id="formBox">
+            <h2 id="formTitle">Login</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" name="username" placeholder="Username" required>
+                    <div class="error-message" id="username-error"></div>
+                </div>
+                <div class="input-group">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <div class="error-message" id="password-error"></div>
+                </div>
+                <button class="btn">Login</button>
+                <p class="toggle-btn" onclick="toggleForm()">Don't have an account? Sign Up</p>
+            </form>
+            <form id="signUpForm" style="display: none;">
+                <div class="input-group">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" name="firstname" placeholder="Firstname" required>
+                    <div class="error-message" id="firstname-error"></div>
+                </div>
+                <div class="input-group">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" name="lastname" placeholder="Lastname" required>
+                    <div class="error-message" id="lastname-error"></div>
+                </div>
+                <div class="input-group">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <div class="error-message" id="email-error"></div>
+                </div>
+                <div class="input-group">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <div class="error-message" id="sign-password-error"></div>
+                </div>
+                <div class="input-group">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" name="confirmPassword" placeholder="Confirm Password" required>
+                    <div class="error-message" id="confirm-password-error"></div>
+                </div>
+                <button class="btn">Sign Up</button>
+                <p class="toggle-btn" onclick="toggleForm()">Already have an account? Login</p>
+            </form>
+        </div>
+    </div>
+    <script>
+        const loginForm = document.getElementById('loginForm');
+        const signUpForm = document.getElementById('signUpForm');
+        const formTitle = document.getElementById('formTitle');
+    
+        function toggleForm() {
+            const isLogin = loginForm.style.display !== "none";
+            loginForm.style.display = isLogin ? "none" : "block";
+            signUpForm.style.display = isLogin ? "block" : "none";
+            formTitle.textContent = isLogin ? "Sign Up" : "Login";
+        }
+    
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+            window.location.href = "portfolioform.html"; 
+        });
+    </script>
+    
+</body>
+</html>

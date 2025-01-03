@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create New Portfolio</title>
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #2424c2;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Header */
+    header {
+      background: #1d152c;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: red;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    .menu {
+      display: flex;
+      gap: 15px;
+    }
+
+    .menu li {
+      list-style: none;
+    }
+
+    .menu li a {
+      color: #fff;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    .menu li a:hover,
+    .menu li a.active {
+      color: #ffd700;
+    }
+
+    .right-nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    .right-nav a {
+      background: #ececec;
+      color: #333;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .right-nav a span {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      background: palevioletred;
+      color: white;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      font-size: 0.75rem;
+      text-align: center;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('port4.jpeg') no-repeat center center/cover;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+    }
+
+    .hero p {
+      margin: 1rem 0;
+      font-size: 1.2rem;
+    }
+
+    .hero .btn {
+      background: #ff4081;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    .hero .btn:hover {
+      background: #e63670;
+    }
+
+    /* Products Section */
+    .products {
+      padding: 2rem;
+      background: url('background-image.jpg') no-repeat center center/cover;
+      color: #fff;
+      text-align: center;
+    }
+
+    .products h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .product-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+
+    .product {
+      width: calc(25% - 20px);
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .product h3 {
+      margin: 1rem 0 0.5rem;
+    }
+
+    .product p {
+      color: #007bff;
+      font-size: 1.1rem;
+    }
+
+    .portfolio-template {
+      color: white;
+    }
+
+    /* Footer */
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px 20px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="#" class="logo">Port<span>folio</span></a>
+    <nav>
+      <ul class="menu">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">Resume</a></li>
+        <li><a href="#">Jobs</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+      <div class="right-nav">
+        <a href="#" class="like"><i class="fas fa-heart"></i><span>0</span></a>
+        <a href="#" class="cart"><i class="fas fa-shopping-cart"></i><span>0</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>Enjoy The Best We Have To Offer</h1>
+      <p>Your one-stop solution for building your portfolio.</p>
+      <a href="#" class="btn">Get Started</a>
+    </div>
+  </section>
+
+  <section class="products">
+    <h2>Featured Products</h2>
+    <div class="product-list">
+      <div class="product">
+        <img src="profile pic/port 5.jpeg" alt="White Shirt">
+        <h3>White Designer</h3>
+        <p>$20.99</p>
+      </div>
+      <div class="product">
+        <img src="profile pic/port 2.jpeg" alt="White Shirt">
+        <h3>White Designer</h3>
+        <p>$20.99</p>
+      </div>
+      <div class="product">
+        <img src="profile pic/port 1.jpeg" alt="for UI/UX">
+        <h3>White Designer</h3>
+        <p>$20.99</p>
+      </div>
+      <div class="product">
+        <img src="profile pic/port 3.jpeg" alt="White Shirt">
+        <h3>White Designer</h3>
+        <p>$20.99</p>
+      </div>
+      <div class="product">
+        <img src="profile pic/port 4.jpeg" alt="White Shirt">
+        <h3>White Designer</h3>
+        <p>$20.99</p>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <h1>Create New Portfolio</h1>
+    <section class="portfolio-template">
+      <h2>Mark's Portfolio</h2>
+      <article>
+        <h3>Welcome to My Portfolio</h3>
+        <p>Hi, I’m Mark, a passionate software developer with 6 years of experience delivering scalable solutions. I specialize in building innovative and efficient applications that solve real-world problems.</p>
+        <p>Explore my journey, projects, and expertise below. Let’s create something amazing together!</p>
+      </article>
+      <section>
+        <h3>About Me</h3>
+        <p>I’m Mark, a results-driven developer with over six years of professional experience. I've worked in diverse industries, sharpening my skills in development and leadership.</p>
+      </section>
+      <section>
+        <h3>Projects</h3>
+        <article>
+          <h4>1. E-Commerce Platform</h4>
+          <p>Description: Developed a full-stack e-commerce platform that handles over 10,000 daily users, driving a 25% increase in customer retention.</p>
+        </article>
+      </section>
+      <section>
+        <h3>Contact Me</h3>
+        <ul>
+          <li>Email: <a href="mailto:mark.dev@example.com">mark.dev@example.com</a></li>
+          <li>LinkedIn: <a href="https://linkedin.com/in/markdev" target="_blank">linkedin.com/in/markdev</a></li>
+        </ul>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <p>Thank you for visiting my portfolio. Let’s create impactful software solutions together!</p>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</body>
+</html>
